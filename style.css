@@ -1,0 +1,25 @@
+#coracao{
+    display:none;
+  }
+  
+  #coracao:checked + label > svg{
+  /*  o + vai atras do proximo elemento. Para usaro que tem dentro do label, usasse o >   */
+    animation: preencher;
+  /*   animation: nome da animacao */
+    animation-duration: .5s;
+  /* duracao da animacao   */
+    animation-fill-mode: forwards;
+  /*  forwards: ultimo frame fica padrao, so altera caso click de novo.    */
+  }
+  
+  @keyframes preencher {
+    /*  keyframes: possibilita a animacacao, dando mais controle sobre ela.   */
+    0%{
+      fill:transparent;
+  /*  nos 0% ficará transparente, ao chegar nos 100% ficará vermelho. Essa opcao foi adicionada para ter uma animacao mais fluida.    */
+    }
+    
+    100% {
+      fill: black;
+    }
+  }
